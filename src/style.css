@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+body {
+  background-color: #ff5454;
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: 400;
+  display: border-box;
+}
+
+#drum-machine {
+  width: 450px;
+  height: 500px;
+  border: 3px solid red;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#display {
+  background-color: #fff;
+  display: grid;
+  height: 250px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 213, 70, 0.4);
+  border: 1px dashed rgba(236, 198, 48, 0.5);
+  color: #493a00;
+  font-size: 24px;
+}
+
+#output {
+  background-color: papayawhip;
+  height: 75px;
+  width: 250px;
+  margin: 50px auto;
+  justify-self: flex-end;
+}
