@@ -2,7 +2,7 @@ import React from 'react';
 import { Display } from './Display';
 import { Output } from './Output';
 
-export const DrumView = ({ playSound, keys }) => {
+export const DrumView = ({ playSound, keys, soundAssignment }) => {
   return (
     <div id="drum-machine">
       <h1>
@@ -11,7 +11,7 @@ export const DrumView = ({ playSound, keys }) => {
           👾
         </span>
       </h1>
-      <Display playSound={playSound} keys={keys} />
+      <Display playSound={playSound} keys={keys} soundAssignment={soundAssignment} />
       <Output />
     </div>
   );
