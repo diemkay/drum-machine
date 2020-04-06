@@ -1,33 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+:root {
+  --size1: 2px;
+  --size2: 4px;
+  --size3: 8px;
+  --size4: 14px;
+  --size5: 16px;
+  --size6: 18px;
+  --size7: 32px;
+}
+
 body {
   height: 100vh;
   background-color: #ff5454;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  font-size: 16px;
+  padding: var(--size4);
+  font-size: var(--size4);
 }
 
 #drum-machine {
-  width: 450px;
-  height: 500px;
-  border: 3px solid red;
+  width: calc(11 * var(--size7));
+  height: calc(15 * var(--size7));
+  border: var(--size3) solid #545662;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
 #display {
-  background-color: #fff;
+  background-color: whitesmoke;
   display: grid;
-  height: 250px;
+  height: calc(8 * var(--size7));
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 }
@@ -36,20 +46,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 213, 70, 0.4);
-  border: 1px dashed rgba(236, 198, 48, 0.5);
-  color: #493a00;
-  font-size: 24px;
 }
 
-.drum-pad:hover {
-  background-color: palegreen;
+button {
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background-color: #d93223;
+  border-radius: 18px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Press Start 2P';
+  font-size: var(--size6);
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
+
+button:hover {
+  background-color: #f24437;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
 }
 
 #output {
-  background-color: papayawhip;
+  background-color: #719f22;
+  color: whitesmoke;
+  border: 2px solid#545662;
   height: 75px;
   width: 250px;
   margin: 50px auto;
   justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  line-height: 2em;
 }

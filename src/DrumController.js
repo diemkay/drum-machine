@@ -1,6 +1,6 @@
 import React from 'react';
 import { DrumView } from './DrumView';
-import { getSound } from './getSound';
+import { getSound, getSoundName } from './getSound';
 
 const KEYS = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'];
 
@@ -26,6 +26,7 @@ export class DrumController extends React.Component {
 
   playSound = currentLetter => {
     const soundToPlay = this.state.keyAssignments[currentLetter];
+    const soundName = getSoundName(soundToPlay);
 
     if (!soundToPlay) {
       return;
@@ -33,7 +34,13 @@ export class DrumController extends React.Component {
 
     const audioTag = document.getElementById(soundToPlay);
 
+    audioTag.currentTime = 0;
+
     audioTag.play();
+
+    this.setState({
+      lastPlayed: soundName,
+    });
   };
 
   componentDidMount = () => {
@@ -51,13 +58,12 @@ export class DrumController extends React.Component {
       soundAssignment[key] = getSound(this.state.keyAssignments[key]) || {};
     });
 
-    console.log(soundAssignment);
-
     return (
       <DrumView
         playSound={this.playSound}
         keys={KEYS}
         soundAssignment={soundAssignment}
+        lastPlayed={this.state.lastPlayed}
       />
     );
   }

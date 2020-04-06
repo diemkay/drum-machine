@@ -1,5 +1,11 @@
 import React from 'react';
 
-export const Output = () => {
-  return <div id="output">TODO: Key pressed</div>;
+export const Output = ({ lastPlayed }) => {
+  return (
+    <div id="output">
+      Last Played:
+      <br />
+      {lastPlayed}
+    </div>
+  );
 };

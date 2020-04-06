@@ -53,3 +53,7 @@ const soundBank = {
 export const getSound = soundId => {
   return soundBank[soundId];
 };
+
+export const getSoundName = soundId => {
+  return soundBank[soundId].name;
+};
