@@ -75,15 +75,15 @@ button:active {
 #output {
   background-color: #719f22;
   color: whitesmoke;
-  border: 2px solid#545662;
-  height: 75px;
-  width: 250px;
+  border: 1px solid lightslategray;
+  height: calc(2 * var(--size7));
+  width: calc(8 * var(--size7));
   margin: 50px auto;
   justify-self: flex-end;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
+  font-size: var(--size3);
   line-height: 2em;
 }
