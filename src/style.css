@@ -37,7 +37,7 @@ body {
 #display {
   background-color: whitesmoke;
   display: grid;
-  height: calc(8 * var(--size7));
+  height: calc(7 * var(--size7));
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 }
@@ -67,6 +67,10 @@ button:hover {
   background-color: #f24437;
 }
 
+button:focus {
+  outline: none;
+}
+
 button:active {
   position: relative;
   top: 1px;
@@ -76,7 +80,7 @@ button:active {
   background-color: #719f22;
   color: whitesmoke;
   border: 1px solid lightslategray;
-  height: calc(2 * var(--size7));
+  height: calc(5 * var(--size7));
   width: calc(8 * var(--size7));
   margin: 50px auto;
   justify-self: flex-end;
@@ -84,6 +88,6 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: var(--size3);
+  font-size: var(--size4);
   line-height: 2em;
 }
