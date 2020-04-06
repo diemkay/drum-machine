@@ -11,13 +11,13 @@ export class DrumController extends React.Component {
       keyAssignments: {
         Q: 'bass-drum-short',
         W: 'bass-drum-long',
-        E: '',
-        A: '',
-        S: '',
-        D: '',
-        Z: '',
-        X: '',
-        C: '',
+        E: 'conga-short',
+        A: 'cymbal',
+        S: 'snare-drum',
+        D: 'maracas',
+        Z: 'cowbell',
+        X: 'open-hi-hat',
+        C: 'closed-hi-hat',
       },
 
       lastPlayed: null,
@@ -50,6 +50,8 @@ export class DrumController extends React.Component {
     Object.keys(this.state.keyAssignments).forEach(key => {
       soundAssignment[key] = getSound(this.state.keyAssignments[key]) || {};
     });
+
+    console.log(soundAssignment);
 
     return (
       <DrumView
